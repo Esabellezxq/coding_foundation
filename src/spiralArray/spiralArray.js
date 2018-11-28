@@ -52,7 +52,7 @@ function walk(n, superArr){
  */
 function recursion(n, superArr){
     
-    let x = 0, y= 0, value = 1, round = n / 2, i = 0;
+    let x = 0, y= 0, value = 1, round = n / 2, i = 0 ,last = n % 2;
         //第一圈n-1
     while(i<round){
         for(; y < n - 1; y++){
@@ -71,13 +71,14 @@ function recursion(n, superArr){
             superArr[x][y] = value;
             value++;
         }
-
+        if(last !== 0){
+            superArr[x][y] = value;
+        }
         n=n-1;
         x++;
         y++;
         i++;
-    }
-            
+    }     
         
     return superArr;
 }
