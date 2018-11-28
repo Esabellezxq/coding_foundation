@@ -71,15 +71,15 @@ function recursion(n, superArr){
             superArr[x][y] = value;
             value++;
         }
-        if(last !== 0){
-            superArr[x][y] = value;
-        }
+        
         n=n-1;
         x++;
         y++;
         i++;
     }     
-        
+    if(last !== 0){
+        superArr[--x][--y] = value;
+    }    
     return superArr;
 }
 /**
