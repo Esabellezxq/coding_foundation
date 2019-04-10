@@ -55,4 +55,5 @@ Object.prototype.clone1 = function(isDeep) {
   return clone(isDeep, this, {})
 }
 
+
 export { clone };
